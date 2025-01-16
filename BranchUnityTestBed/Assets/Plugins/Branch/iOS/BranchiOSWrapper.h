@@ -61,5 +61,7 @@ extern "C" {
     #pragma mark - QR Code methods
 
     void _generateBranchQRCode(char *universalObjectJson, char *linkPropertiesJson, char *qrCodeSettingsJson, char *callbackId);
+
+    void _validate();
 }
 

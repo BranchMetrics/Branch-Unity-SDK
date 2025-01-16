@@ -31,6 +31,7 @@ import io.branch.referral.util.CurrencyType;
 import io.branch.referral.util.LinkProperties;
 import io.branch.referral.util.ShareSheetStyle;
 import io.branch.referral.QRCode.BranchQRCode;
+import io.branch.referral.validators.IntegrationValidator;
 
 /**
  * Created by grahammueller on 3/25/15.
@@ -426,6 +427,13 @@ public class BranchUnityWrapper {
              jsone.printStackTrace();
          }
      }
+
+     /**
+     * Validator methods
+     */
+    public static void validate() {
+        IntegrationValidator.validate(UnityPlayer.currentActivity.getApplicationContext());
+    }
 
     /**
      * Share methods

@@ -191,6 +191,16 @@ public class BranchAndroidWrapper {
 
 	#endregion
 
+	#region Validator methods
+
+	public static void validate() {
+		_runBlockOnThread(() => {
+			_getBranchClass().CallStatic("validate");
+		});
+	}
+
+	#endregion
+
 	#region Utility methods
 
 	private static AndroidJavaClass _getBranchClass() {
@@ -211,6 +221,7 @@ public class BranchAndroidWrapper {
 	#endregion
     
     private static AndroidJavaClass _branchClass;
+	private static AndroidJavaClass _validatorClass;
     
 #endif
 }

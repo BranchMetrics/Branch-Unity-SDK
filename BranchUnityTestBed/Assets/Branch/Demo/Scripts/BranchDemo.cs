@@ -171,6 +171,10 @@ public class BranchDemo : MonoBehaviour {
 		}
     }
 
+	public void OnBtn_ValidateSDKIntegration() {
+		Branch.validate();
+	}
+
 	public void OnBtn_SendBuyEvent() {
         BranchEvent e = new BranchEvent (BranchEventType.PURCHASE);
 

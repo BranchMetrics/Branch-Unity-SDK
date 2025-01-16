@@ -5,7 +5,7 @@
 #include "BranchUniversalObject.h"
 #include "BranchQRCode.h"
 #import "UnityAppController.h"
-
+#import "Branch+Validator.h"
 
 @interface BranchUnityWrapper()
 @property (nonatomic, strong, readwrite) NSString *branchKey;
@@ -632,4 +632,8 @@ void _shareLinkWithLinkProperties(char *universalObjectJson, char *linkPropertie
     BranchLinkProperties *prop = branchLinkPropertiesFormDict(linkPropertiesDict);
     
     [obj showShareSheetWithLinkProperties:prop andShareText:CreateNSString(message) fromViewController:nil completionWithError:callbackWithShareCompletionForCallbackId(callbackId)];
+}
+
+void _validate() {
+    [[Branch getInstance] validateSDKIntegration];
 }
